@@ -8,18 +8,39 @@ It supports streaming, search, playlists, favorites, queue management, downloads
 
 ## 🚀 Features
 
-- 🎧 Stream songs using JioSaavn API  
-- 🔍 Search (Songs, Artists, Albums)  
-- 📂 Playlist support (Create / Delete / Add songs)  
-- ❤️ Favorites system  
-- 🕘 Recently played  
-- 📥 Download songs for offline playback  
-- 🔀 Shuffle mode  
-- 🔁 Repeat mode (Off / One / All)  
-- 🎶 Mini player  
-- 📜 Draggable queue (Reorder songs)  
-- 🌙 Light/Dark theme support  
-- 💾 Persistent storage (AsyncStorage)  
+### 🎧 Playback
+- Play / Pause / Resume
+- Seek audio
+- Next / Previous
+- Shuffle mode
+- Repeat (Off / One / All)
+- Mini player
+- Background playback support
+
+### 📂 Music Discovery
+- Search Songs
+- Search Artists
+- Search Albums
+- Search Playlists
+- Infinite scrolling search
+
+### 📀 Queue Management
+- Dynamic queue
+- Drag & drop reorder
+- Remove from queue
+- Highlight current playing track
+
+### ❤️ User Features
+- Favorites
+- Recently Played
+- Create custom playlists
+- Add / Remove songs from playlists
+- Download songs for offline use
+- Light / Dark theme toggle
+- Search history
+
+### 📡 API Integration
+- Base URL:https://saavn.sumit.co/api
 
 ---
 
@@ -38,11 +59,72 @@ It supports streaming, search, playlists, favorites, queue management, downloads
 
 ---
 
+## 📁 Project Structure
+
+music-player/
+├── assets/                     # Images & static assets
+│
+├── src/
+│   ├── api/                    # API layer
+│   │   └── saavnApi.ts
+│   │
+│   ├── components/             # Reusable UI components
+│   │   ├── AnimatedTabs.tsx
+│   │   └── MiniPlayer.tsx
+│   │
+│   ├── navigation/             # Navigation setup
+│   │   └── RootNavigator.tsx
+│   │
+│   ├── screens/                # App screens
+│   │   ├── HomeScreen.tsx
+│   │   ├── SearchScreen.tsx
+│   │   ├── PlayerScreen.tsx
+│   │   ├── QueueScreen.tsx
+│   │   ├── PlaylistDetailsScreen.tsx
+│   │   ├── FavoritesScreen.tsx
+│   │   ├── DownloadsScreen.tsx
+│   │   └── ArtistsSongsScreen.tsx
+│   │
+│   ├── services/               # Business logic services
+│   │   ├── audioService.ts
+│   │   └── downloadService.ts
+│   │
+│   ├── store/                  # Zustand store
+│   │   └── usePlayerStore.ts
+│   │
+│   ├── utils/                  # Utility helpers
+│   │   └── imageHelper.ts
+│   │
+│   ├── theme/                  # App design system
+│   │   ├── colors.ts
+│   │   └── design.ts
+│   │
+│   └── types/                  # Type definitions
+│
+├── App.tsx
+├── index.js
+├── app.json
+├── babel.config.js
+├── tsconfig.json
+├── package.json
+├── eas.json
+├── .gitignore
+└── README.md
+
+---
+
 ---
 
 ## 🧠 Architecture Overview
 
 ---
+UI (Screens & Components)
+↓
+Zustand Store (Global State)
+↓
+Audio Service (Expo AV)
+↓
+JioSaavn API
 
 ## 🔑 Key Modules Explained
 
