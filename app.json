@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "music-player",
+    "slug": "music-player",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio",
+          "audio",
+          "audio",
+          "audio"
+        ]
+      },
+      "bundleIdentifier": "com.anonymous.musicplayer"
+    },
+    "android": {
+      "package": "com.bharti.BajaDo",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "WAKE_LOCK",
+        "FOREGROUND_SERVICE",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "plugins": [
+      [
+        "expo-av",
+        {
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "owner": "sumitb878",
+    "extra": {
+      "eas": {
+        "projectId": "8058e822-b47f-412c-8775-713d791555eb"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8058e822-b47f-412c-8775-713d791555eb"
+    }
+  }
+}
