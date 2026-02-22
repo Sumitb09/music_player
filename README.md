@@ -37,3 +37,52 @@ It supports streaming, search, playlists, favorites, queue management, downloads
   `https://saavn.sumit.co/api`
 
 ---
+
+---
+
+## 🧠 Architecture Overview
+
+---
+
+## 🔑 Key Modules Explained
+
+### 🎵 `store/usePlayerStore.ts`
+Central state management:
+- Queue
+- Playback
+- Shuffle & Repeat
+- Favorites
+- Playlists
+- Downloads
+- Search History
+- Persistence (AsyncStorage)
+
+---
+
+### 🎧 `services/audioService.ts`
+Handles:
+- Play
+- Pause
+- Resume
+- Seek
+- Playback listener
+
+---
+
+### 🔍 `api/saavnApi.ts`
+Handles:
+- Search
+- Playlist details
+- Song details
+- Artist songs
+- API base: `https://saavn.sumit.co/api`
+
+---
+
+### 📜 `screens/QueueScreen.tsx`
+Supports:
+- Drag & drop reorder
+- Remove from queue
+- Current song highlight
+
+---
